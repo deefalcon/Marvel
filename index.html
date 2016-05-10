@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	</head>	
+	<body>
+		
+		<table class="table">
+			<tr>
+				<th>hi</th>
+			</tr>
+		</table>
+
+
+		<script language="javascript" type="text/javascript">
+			$(function(){
+				var $datas = $('#datas');
+			$.ajax({
+				type: 'GET',
+				url: 'http://gateway.marvel.com/v1/public/comics?format=comic&formatType=comic&noVariants=true&dateDescriptor=lastWeek&dateRange=1969-01-01%2C%201970-01-01&title=Silver%20Surfer&issueNumber=12&apikey=43a30ebf2b6c2f83215d8d05fa753ea7',
+				success: function(datas){
+					$.each(data, function(i, data){
+						tr = $('<tr/>');
+						tr.append("<td>" + data.id + "</td>");
+						$('table').append(tr);
+					});
+				}
+
+			});
+
+		});
+
+		</script>
+
+
+		<script language="javascript" type="text/javascript">
+		
+		</script> 
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+<var api = require('marvel-api');
+
+			var marvel = api.createClient({
+				publicKey: '43a30ebf2b6c2f83215d8d05fa753ea7',
+				privateKey: '8e3736516a61922a9e3e1f593076d8276e7e1d06'
+			});
+
+			var json = marvel.characters.findAll(5).then(console.log).fail(console.log).done();/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*<!--
+
+			var myArray    = new Array();
+    		myArray[0] = 1;
+		    myArray[1] = 2.218;
+    		myArray[2] = 33;
+    		myArray[3] = 114.94;
+    		myArray[4] = 5;
+    		myArray[5] = 33;
+    		myArray[6] = 114.980;
+    		myArray[7] = 5;
+
+    		var myTable= "<table><tr><td style='width: 100px; color: red;'>Col Head 1</td>";
+    		myTable+= "<td style='width: 100px; color: red; text-align: right;'>Col Head 2</td>";
+    		myTable+="<td style='width: 100px; color: red; text-align: right;'>Col Head 3</td></tr>";
+
+		    myTable+="<tr><td style='width: 100px;                   '>---------------</td>";
+    		myTable+="<td     style='width: 100px; text-align: right;'>---------------</td>";
+    		myTable+="<td     style='width: 100px; text-align: right;'>---------------</td></tr>";
+
+			for (var i=0; i<8; i++) {
+    		myTable+="<tr><td style='width: 100px;'>Number " + i + " is:</td>";
+    		myArray[i] = myArray[i].toFixed(3);
+    		myTable+="<td style='width: 100px; text-align: right;'>" + myArray[i] + "</td>";
+    		myTable+="<td style='width: 100px; text-align: right;'>" + myArray[i] + "</td></tr>";
+    		}  
+    		myTable+="</table>";
+
+ 			document.write(myTable);
+
+		//-->*/
